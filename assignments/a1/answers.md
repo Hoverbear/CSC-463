@@ -66,7 +66,7 @@ $\therefore$ The number of nodes that can transmit is $\frac{n}{4}$.
 * The desired format of the answer is not clearly specified. Trying my best.
 * Referencing basic access mechanism figure on page 92 (of PDF http://webhome.csc.uvic.ca/~wkui/Courses/wireless/802.11-1999.pdf) figure 51.
 
-First, determining the time it takes to transmit the first frame, including 
+First, determining the time it takes to transmit the first frame, including
 
 
 ## Question 4
@@ -96,3 +96,31 @@ $N_E$ receives $0.6(T_A + T_B + T_C + T_D)=0.6*4*T=2.4T$. Since these values are
 Therefore we only need to consider the position of $N_E$ in relation to its transmissions.
 
 $$0.5(c(D_{EA}^2)+E_{Rx}) + 0.2(c(D_{EB}^2)+E_{Rx}) + 0.2(c(D_{EC}^2)+E_{Rx}) + 0.1(c(D_{ED}^2)+E_{Rx})$$
+
+First, assigning a coordinate system to the square. We will set $(0,0)$ to be the center point and align the coordinate signs as you would a Cartesian space.
+
+$$ x = (Bx+Cx) - (Ax+Dx) $$
+$$ y = (Ay+By) - (Cy+Dy) $$
+
+Substituting...
+
+$$ x = (.2 - .2) - (.5 - .1) = -.2 $$
+$$ y = (.5 - .2) - (.2 + .1) = .4 $$
+
+$\therefore$ The most efficient placement of $E$ is at $(-.2, .4)$.
+
+## Question 5
+
+$$ E_{T_x}(d)=cd^\alpha $$
+
+$$ \angle BAC = \theta $$
+
+### Q5.a
+
+$$ d_1 < d_3\cos{\theta} $$
+
+Where $\alpha=2$.
+
+$$ E_{T_x}(d_1) + E_{T_x}(d_2) = cd_1^2 + cd_2^2 = c(d_1^2 + d_2^2) $$
+
+$$ E_{T_x}(d_3) = cd_3^2 = cd_3^2 $$
