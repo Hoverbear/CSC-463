@@ -67,8 +67,8 @@ $\therefore$ The number of nodes that can transmit is $\frac{n}{4}$.
 
 **Definitions:**
 
-* **Slot Time:** The Slot Time (in μs) that the MAC will use for defining the PIFS and DIFS periods.
-* **SIFS Time:** The nominal time (in μs) that the MAC and PHY will require to receive the last symbol of a frame at the air interface, process the frame, and respond with the first symbol on the air
+* **Slot Time:** The Slot Time (in $\mu$s) that the MAC will use for defining the PIFS and DIFS periods.
+* **SIFS Time:** The nominal time (in $\mu$s) that the MAC and PHY will require to receive the last symbol of a frame at the air interface, process the frame, and respond with the first symbol on the air
 interface of the earliest possible response frame.
 * **$CW_{\text{min}}$:** The minimum size of the contention window, in units of `Slot Time`.
 * **$CW_{\text{max}}$:** The maximum size of the contention window, in units of `Slot Time`.
@@ -79,6 +79,10 @@ interface of the earliest possible response frame.
 See attached hand-drawn figure.
 
 ### Q3.B
+
+Time to transmit frame, as one fragment: $\frac{1024 + 272 + 128 \text{bits}}{ 1,000,000 \frac{\text{bits}}{\text{s}} } = 0.001424 \text{s} = 1424 \mu \text{s}$.
+Time to transmit ACK: $\frac{ 112 + 128 \text{bits}}{ 1,000,000 \frac{\text{bits}}{\text{s}} } = 0.00024 \text{s} = 240 \mu \text{s}$
+
 
 
 
