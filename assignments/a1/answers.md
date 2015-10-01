@@ -63,10 +63,23 @@ $\therefore$ The number of nodes that can transmit is $\frac{n}{4}$.
 * Since the radio channel is *reliable* we don't need to think about $\text{ACK}_{Timeout}$.
 * Since the channel is reliable we can assume that the connection always receives the correct 1 Mbps.
 * Since there is no *fragmentation* of packets needed we can presume the packet payload size is sufficient for the message for the first, and only, frame in each.
-* The desired format of the answer is not clearly specified. Trying my best.
-* Referencing basic access mechanism figure on page 92 (of PDF http://webhome.csc.uvic.ca/~wkui/Courses/wireless/802.11-1999.pdf) figure 51.
+* Referencing figure on page 93 (of PDF http://webhome.csc.uvic.ca/~wkui/Courses/wireless/802.11-1999.pdf) figure 52.
 
-First, determining the time it takes to transmit the first frame, including
+**Definitions:**
+
+* **Slot Time:** The Slot Time (in μs) that the MAC will use for defining the PIFS and DIFS periods.
+* **SIFS Time:** The nominal time (in μs) that the MAC and PHY will require to receive the last symbol of a frame at the air interface, process the frame, and respond with the first symbol on the air
+interface of the earliest possible response frame.
+* **$CW_{\text{min}}$:** The minimum size of the contention window, in units of `Slot Time`.
+* **$CW_{\text{max}}$:** The maximum size of the contention window, in units of `Slot Time`.
+
+
+### Q3.A
+
+See attached hand-drawn figure.
+
+### Q3.B
+
 
 
 ## Question 4
