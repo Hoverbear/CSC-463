@@ -97,10 +97,16 @@ $\therefore$ The first laptop will have successfully transmitted after the follo
 * Backoff ($n*50 \mu$s)
 * DIFS ($128 \mu$s)
 * (Sent) DATA ($1424 \mu$s)
-* DIFS ($128 \mu$s)
+* SIFS ($28 \mu$s)
 * (Recieved) ACK ($240 \mu$s)
 
+The expected delay for one laptop to successfully transmit it's first packet is dependent on the backoff chosen, represented as $n*50 \mu$s where $n$ is a randomly generated number.
 
+We will assert that the desired answer requires that the laptop receive an ACK back.
+
+$\therefore$ The expected delay is:
+
+$$ 128*4 + 28 + 1424*2 + 300 + 240 + 50*n = 3928 + 50n \mu\text{s}$$
 
 ## Question 4
 
@@ -124,23 +130,7 @@ $$E_{Total}=E_{Tx}(d)+E_{Rx}=c(d^2)+E_{Rx}$$
 | A,B,C,D | E        | 0.6         |
 | A,B,C,D | A,B,C,D  | 0.4         |
 
-$N_E$ receives $0.6(T_A + T_B + T_C + T_D)=0.6*4*T=2.4T$. Since these values are all equal it does not factor into our consideration of where to place $N_E$, since any cost 'paid' moving it farther from a node would be 'returned' since it would be closer to another. (So long as it stays inside the rectangle.)
-
-Therefore we only need to consider the position of $N_E$ in relation to its transmissions.
-
-$$0.5(c(D_{EA}^2)+E_{Rx}) + 0.2(c(D_{EB}^2)+E_{Rx}) + 0.2(c(D_{EC}^2)+E_{Rx}) + 0.1(c(D_{ED}^2)+E_{Rx})$$
-
-First, assigning a coordinate system to the square. We will set $(0,0)$ to be the center point and align the coordinate signs as you would a Cartesian space.
-
-$$ x = (Bx+Cx) - (Ax+Dx) $$
-$$ y = (Ay+By) - (Cy+Dy) $$
-
-Substituting...
-
-$$ x = (.2 - .2) - (.5 - .1) = -.2 $$
-$$ y = (.5 - .2) - (.2 + .1) = .4 $$
-
-$\therefore$ The most efficient placement of $E$ is at $(-.2, .4)$.
+<!-- TODO -->
 
 ## Question 5
 
@@ -192,3 +182,25 @@ $$ E_{T_x}(d_1) + E_{T_x}(d_2) < E_{T_x}(d_3) $$
 The energy to transmit from $A$ to $C$ directly is more than the energy to transmit from $A$ to $B$ to $C$.
 
 ### Q5.b
+
+$$ (\frac{ d_3 }{ d_1 })^\alpha - 1 > (1 + (\frac{d_3}{d_1})^2 - 2(\frac{d_3}{d_1})\cos{\theta})^{\frac{\alpha}{2}} $$
+
+Setting $d_1 = 1$, it becomes:
+
+$$ d_3^\alpha - 1 = ( 1 + d_3^2 - 2d_3\cos{\theta} ) $$
+
+Applying the cosine law to get $d_2$ we get:
+
+$$ d_2^2 = 1^2 + d_3^2 - 2d_3(1)\cos{\theta} $$
+
+Which substitutes into the equation, yielding:
+
+$$ d_3^\alpha - 1 > (d_2^2)^{\frac{\alpha}{2}} $$
+
+$$ d_3^\alpha > d_2^\alpha + 1 $$
+
+Recalling that $d_1 = 1$:
+
+$$ d_3^\alpha > d_2^2 + d_1^2 $$
+
+$\therefore$ The energy to transmit from $A$ to $C$ directly is more than the energy to transmit from $A$ to $B$ to $C$.
