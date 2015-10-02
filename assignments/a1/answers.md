@@ -179,11 +179,11 @@ $$ d_3^2 + 2d_1(d_1 - d_3 \cos{\theta}) > d_3^2 + 2d_1^2 $$
 
 From here we know that $d_3\cos{\theta} > d_1$.
 
-So we know that $d_3^2 + 2d_1(d_1 - d_3 \cos{\theta}) \approx d_3^2 + 2d_1 - n$ **where $n$ is some small value**.
+So we know that $d_3^2 + 2d_1(d_1 - d_3 \cos{\theta}) \approx d_3^2 + 2d_1 - n$ **where $n$ is some small value**. (We assert that $2d_1 - n < 2d_1^2$)
 
 Then:
 
-$$ d_3^2 + 2d_1 > d_3^2 + 2d_1^2 $$
+$$ d_3^2 + 2d_1 - n > d_3^2 + 2d_1^2 $$
 
 This shows that:
 
