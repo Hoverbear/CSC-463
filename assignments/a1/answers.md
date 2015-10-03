@@ -130,7 +130,55 @@ $$E_{Total}=E_{Tx}(d)+E_{Rx}=c(d^2)+E_{Rx}$$
 | A,B,C,D | E        | 0.6         |
 | A,B,C,D | A,B,C,D  | 0.4         |
 
-<!-- TODO -->
+Setting $D=(0,0)$, $C=(1,0)$, $B=(1,1)$, $A=(0,1)$.
+
+Recalling the distance formula $D = \sqrt{ X_2 - X_1)^2 + (Y_2 - Y_1)^2 }$
+
+For A:
+
+$$ E_{AE} = 0.6(D_{AE})^2 = 0.6(\sqrt{ (x_E - 0)^2 + (y_E - 1)^2 })^2 $$
+$$ E_{EA} = 0.5(D_{EA})^2 = 0.5(\sqrt{ (0 - x_E)^2 + (1 - y_E)^2 })^2 $$
+
+$$ E_{AE} + E_{EA} = 0.6(x_E^2 + y_E^2 - 2y_E + 1) + 0.5(x_E^2 + 1 - 2y_E + y_E^2) = 1.1(x_E^2 + y_E^2 - 2y_E + 1) $$
+
+For B:
+
+$$ E_{BE} = 0.6(D_{BE})^2 = 0.6(\sqrt{ (x_E - 1)^2 + (y_E - 1)^2 })^2 $$
+$$ E_{EB} = 0.2(D_{EB})^2 = 0.2(\sqrt{ (1 - x_E)^2 + (1 - y_E)^2 })^2 $$
+
+$$ E_{BE} + E_{EB} = 0.8(x_E^2 + y_E^2 - 2x_E - 2y_E + 2) $$
+
+For C:
+
+$$ E_{CE} = 0.6(D_{CE})^2 = 0.6(\sqrt{ (x_E - 1)^2 + (y_E - 0)^2 })^2 $$
+$$ E_{EC} = 0.2(D_{EC})^2 = 0.2(\sqrt{ (1 - x_E)^2 + (0 - y_E)^2 })^2 $$
+
+$$ E_{CE} + E_{EC} = 0.8(x_E^2 + y_E^2 - 2x_E + 1) $$
+
+For D:
+
+$$ E_{DE} = 0.6(D_{DE})^2 = 0.6(\sqrt{ (x_E - 0)^2 + (y_E - 0)^2 })^2 $$
+$$ E_{ED} = 0.1(D_{ED})^2 = 0.1(\sqrt{ (0 - x_E)^2 + (0 - y_E)^2 })^2 $$
+
+$$ E_{DE} + D_{ED} = 0.7(x_E^2 + y_E^2) $$
+
+Combining:
+
+$$ E_{Total} = 1.1(x_E^2 + y_E^2 - 2y_E + 1) + 0.8(x_E^2 + y_E^2 - 2x_E - 2y_E + 2) + 0.8(x_E^2 + y_E^2 - 2x_E + 1) + 0.7(x_E^2 + y_E^2) $$
+
+Simplifying:
+
+$$ E_{Total} = 3.4x_E^2 + 3.4y_E^2 - 3.2x_E - 3.8y_E + 3.5 $$
+
+Then using partial differentiation:
+
+$$ \frac{d}{dx} = 6.8x - 3.2 $$
+$$ \frac{d}{dy} = 6.8x - 3.8 $$
+
+Minimum for $x = \frac{3.2}{6.8}$.
+Minimum for $y = \frac{2.2}{6.8}$.
+
+Therefore the global minimal energy consumption for E is best at $(\frac{3.2}{6.8}, \frac{3.8}{6.8})$.
 
 ## Question 5
 
