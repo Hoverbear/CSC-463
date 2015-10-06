@@ -73,3 +73,5 @@ Proposed solution to detect congestion is to send "important" packet fragments t
 * The network gets flooded to syncronize a decrease, but causes temporary uselessness.
 * Fairness
 * Not tested on variable loads.
+* Complex implementation with little payoff.
+* Would require protocol change.
